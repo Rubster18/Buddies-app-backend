@@ -18,7 +18,7 @@ app.use(express.static("public"));
 app.get('/get-table',(req,res)=>{
     console.log("entro al get");
     pool
-    .query('select * from buddies union select * from patients;')
+    .query('select * from buddies union select * from patients')
     .then((result) => res.json(result.rows))
     .catch((e) => console.error(e));
 })
@@ -27,7 +27,7 @@ app.post('/create-buddy',function (req,res) {
     const name = req.fields.name;
     const dateofbirth = req.fields.birth;
     const email = req.fields.email;
-    const hometwon = req.fields.hometwon;
+    const hometown = req.fields.hometown;
     const hobbiesandinterests = req.fields.hobbie;
     const im_a_buddy = req.fields.im_a_buddy;
     const joined_at = new Date();
