@@ -17,7 +17,7 @@ const pool = new Pool({
 
 
 app.get('/get-table',(req,res)=>{
-    const query = "select * from buddies b union select * from patients p";
+    const query = "select * from buddies b union select * from patients p order by joined_at desc";
     
     console.log("entro al get");
     pool
