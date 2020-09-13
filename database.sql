@@ -19,6 +19,7 @@ CREATE TABLE buddies (
 	hometown varchar(30) NOT NULL,
 	hobbiesandinterests text NOT NULL,
 	im_a_buddy INT NOT NULL,
+	joined_at date NOT NULL,
 	CONSTRAINT buddies_pkey PRIMARY KEY (id)
 );
 
@@ -33,6 +34,7 @@ CREATE TABLE public.patients (
 	hometown varchar(30) NOT NULL,
 	hobbiesandinterests text NOT NULL,
 	im_a_buddy INT NOT NULL,
+	joined_at date NOT NULL,
 	CONSTRAINT patients_pkey PRIMARY KEY (id)
 );
 
