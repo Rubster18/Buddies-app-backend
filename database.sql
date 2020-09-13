@@ -61,6 +61,7 @@ CREATE TABLE matches (
 
 /* inserting elements*/
 
+<<<<<<< HEAD
 INSERT INTO buddies ("name",dateofbirth,email,hometown,hobbiesandinterests, im_a_buddy, joined_at) VALUES ('Antony Leans', '1993-02-23','leantony@thonet.uk','Amsterdam','travel',1,'2020-09-13');
 
 
@@ -76,10 +77,28 @@ INSERT INTO buddies ("name",dateofbirth,email,hometown,hobbiesandinterests, im_a
 INSERT INTO buddies ("name",dateofbirth,email,hometown,hobbiesandinterests, im_a_buddy, joined_at) VALUES ('Vincent Van Grondelle', '1992-12-13','vincent@thonet.uk','Ultrecht','travel',1,'2020-09-13');
 
 INSERT INTO buddies ("name",dateofbirth,email,hometown,hobbiesandinterests, im_a_buddy, joined_at) VALUES ('Hanna Lunne', '1988-01-30','hannaLun@thonet.uk','Amsterdam','walk',1,'2020-09-13');
+=======
+INSERT INTO buddies ("name",dateofbirth,email,hometown,hobbiesandinterests, im_a_buddy, joined_at) VALUES ('Antony Leans', '1993-02-23','leantony@thonet.uk','Amsterdam','travel',1, '2020-09-13');
+
+
+INSERT INTO buddies ("name",dateofbirth,email,hometown,hobbiesandinterests, im_a_buddy, joined_at) VALUES ('Jhon Clavan', '1994-01-26','jhon@thonet.es','Ultrecht','eat pizza',1, '2020-09-13');
+
+
+INSERT INTO buddies ("name",dateofbirth,email,hometown,hobbiesandinterests, im_a_buddy, joined_at) VALUES ('Annika Van Hommel', '1988-10-13','Annika@thonet.uk','Amsterdam','running',1, '2020-09-13');
+
+
+INSERT INTO buddies ("name",dateofbirth,email,hometown,hobbiesandinterests, im_a_buddy, joined_at) VALUES ('Diane Sturgles', '1993-02-23','DianeSt@thonet.uk','Amsterdam','travel',1, '2020-09-13');
+
+
+INSERT INTO buddies ("name",dateofbirth,email,hometown,hobbiesandinterests, im_a_buddy, joined_at) VALUES ('Vincent Van Grondelle', '1992-12-13','vincent@thonet.uk','Ultrecht','travel',1, '2020-09-13');
+
+INSERT INTO buddies ("name",dateofbirth,email,hometown,hobbiesandinterests, im_a_buddy, joined_at) VALUES ('Hanna Lunne', '1988-01-30','hannaLun@thonet.uk','Amsterdam','walk',1, '2020-09-13');
+>>>>>>> f740ac7e339d4fa5612393ebd1d1f03369e79e98
 
 /*Patients*/
 
 
+<<<<<<< HEAD
 INSERT INTO patients ("name",dateofbirth,email,hometown,hobbiesandinterests, im_a_buddy, joined_at) VALUES ('Veronica Alinafe', '1970-01-03','leantony@thonet.uk','Amsterdam','travel',0,'2020-09-13');
 
 
@@ -93,3 +112,18 @@ INSERT INTO patients ("name",dateofbirth,email,hometown,hobbiesandinterests, im_
 
 
 INSERT INTO patients ("name",dateofbirth,email,hometown,hobbiesandinterests, im_a_buddy, joined_at) VALUES ('Marie Tonelli', '1994-11-03','marie@thonet.uk','Ultrecht','painting',0,'2020-09-13');
+=======
+INSERT INTO patients ("name",dateofbirth,email,hometown,hobbiesandinterests, im_a_buddy, joined_at) VALUES ('Veronica Alinafe', '1970-01-03','leantony@thonet.uk','Amsterdam','travel',0, '2020-09-13');
+
+
+INSERT INTO patients ("name",dateofbirth,email,hometown,hobbiesandinterests, im_a_buddy, joined_at) VALUES ('Erick Ford', '1985-05-26','erick@thonet.es','Ultrecht','play the piano',0, '2020-09-13');
+
+
+INSERT INTO patients ("name",dateofbirth,email,hometown,hobbiesandinterests, im_a_buddy, joined_at) VALUES ('Marcelo Dongobud', '1988-10-13','MarceloGon@thonet.uk','Amsterdam','running',0, '2020-09-13');
+
+
+INSERT INTO patients ("name",dateofbirth,email,hometown,hobbiesandinterests, im_a_buddy, joined_at) VALUES ('Frank Gole', '1984-11-21','frank@thonet.uk','Amsterdam','play guitar',0, '2020-09-13');
+
+
+INSERT INTO patients ("name",dateofbirth,email,hometown,hobbiesandinterests, im_a_buddy, joined_at) VALUES ('Marie Tonelli', '1994-11-03','marie@thonet.uk','Ultrecht','painting',0, '2020-09-13');
+>>>>>>> f740ac7e339d4fa5612393ebd1d1f03369e79e98
