@@ -28,29 +28,30 @@ app.get('/get-table',(req,res)=>{
     .catch((e) => console.error(e));
 })
 
-app.post('/create-buddy',function (req,res) {
+app.post('/create-user',function (req,res) {
     const name = req.fields.name;
-    const dateofbirth = req.fields.birth;
+    const dateofbirth = req.fields.birthDate;
     const email = req.fields.email;
     const hometown = req.fields.hometown;
-    const hobbiesandinterests = req.fields.hobbie;
+    const hobbiesandinterests = req.fields.hobbies;
     const im_a_buddy = req.fields.im_a_buddy;
     const joined_at = new Date();
-    const query = "INSERT INTO buddies (name,dateofbirth,email,hometown,hobbiesandinterests, im_a_buddy,joined_at) VALUES ($1, $2, $3 ,$4, $5, $6,$7 )"
+    let query;
+    if(im_a_buddy){
+        query = "INSERT INTO buddies (name,dateofbirth,email,hometown,hobbiesandinterests, im_a_buddy,joined_at) VALUES ($1, $2, $3 ,$4, $5, $6,$7 )"
+    } else{
+        query ="INSERT INTO patients (name,dateofbirth,email,hometown,hobbiesandinterests, im_a_buddy,joined_at) VALUES ($1, $2, $3 ,$4, $5, $6,$7 )"
+    }
     
     pool
     .query(query,[name,dateofbirth,email,hometown,hobbiesandinterests,im_a_buddy,joined_at])
     .then(()=> res.send("object Create"))
     .catch((e) => console.log(e))
-    console.log(req.fields.name);
 })
 
 
-app.post('http://localhost:9000/create-patients',function (req, res) {
-    
-})
 
 
 app.listen(9000,function () {
-    console.log('I am ready to rock');
+    console.log('Server running in port 9000');
 })
