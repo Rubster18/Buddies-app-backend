@@ -19,12 +19,24 @@ app.use(formidable())
 app.use(express.static("public"));
 
 app.get('/get-table',(req,res)=>{
-    const query = "select * from buddies b where enabled = 1 union select * from patients p where enabled = 1 order by joined_at desc";
+    const query = `select b.*, p."name" as matchName from buddies b 
+    left join matches m on m.buddyid = b.id 
+    left join patients p on m.patient_id = p.id
+    where b.enabled = 1 
+    
+    union 
+    
+    select p.*, b."name" as matchName from patients p 
+    left join matches m on m.patient_id = p.id 
+    left join buddies b on m.buddyid = b.id 
+    where p.enabled = 1 
+    
+    order by joined_at desc;`;
     
     console.log("entro al get");
     pool
     .query(query)
-    .then((result) => res.json(result.rows))
+    .then((result) => {res.json(result.rows); console.log(result.rows)})
     .catch((e) => console.error(e));
 })
 
@@ -54,9 +66,7 @@ app.post('/create-user',function (req,res) {
 
 app.put('/disable-user', (req, res) => {
     console.log("Disabling an user");
-    // console.log("Receiving: >>>>", req);
-    console.log(req.fields);
-
+    
     const isBuddy = req.fields.isBuddy;
     const id = req.fields.id;
 
