@@ -109,3 +109,12 @@ update patients set enabled = 1;
 
 alter table buddies alter column enabled set not null;
 alter table patients alter column enabled set not null;
+
+/*Add enabled field to the matches*/
+
+alter table matches 
+add column enabled int;
+
+update matches set enabled = 1;
+
+alter table matches alter column enabled set not null;
